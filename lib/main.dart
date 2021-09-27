@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
-void main() {
-  runApp( MyApp());
+import 'package:firebase_core/firebase_core.dart';
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // これをつけないとなぜか怒られる。
+  await Firebase.initializeApp();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -29,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   var todo ="";
   FirebaseFirestore firestore = FirebaseFirestore.instance;
-  Future<void> fetchTaskList ()async{
+  Future<void> firebaseTaskList ()async{
   final snapshot = await FirebaseFirestore.instance.collection('name').get();
   todo = snapshot.docs.first.data() ['todo'];
   setState(() {});
@@ -38,22 +40,35 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    fetchTaskList ();
+    firebaseTaskList();
   }
+  final items = List<String>.generate(10, (i) => "Item $i");
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(todo,
-          style:  const TextStyle(
-            fontSize: 35.0
-          ),
-          //style: (
-            //fontWeight: FontWeight.w700,
-            //fontSize: 35.0
-          ),
-          ),
-      );
+        child: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context,int position) {
+            return ListTile(
+              title: Text('$todo'),
+            );
+          },
+        ),
+      ),
+        floatingActionButton: FloatingActionButton(
+          child:  Icon(Icons.add),
+          onPressed: ()=> print("押したでー"),
+        ),
+        //Text(todo,
+         // style: TextStyle(
+           //   color: Colors.pink,
+             // fontWeight: FontWeight.w700,
+              //fontSize: 35.0
+
+        //),
+      
+    );
   }
 }
