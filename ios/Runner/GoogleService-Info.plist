@@ -3,32 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>848114514935-5qphb9ne7eaqm14af3h721k2m4aqg83m.apps.googleusercontent.com</string>
+	<string>898618242588-f9h8ko2ft870mb7k791nnnm579tsrmc0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.848114514935-5qphb9ne7eaqm14af3h721k2m4aqg83m</string>
+	<string>com.googleusercontent.apps.898618242588-f9h8ko2ft870mb7k791nnnm579tsrmc0</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDhd3iV0RZwFuqvmg9y5PUFBLBZs-pdI08</string>
+	<string>AIzaSyB0xPqMPDX-eQF4PMH-6eHneIW2XNduK7U</string>
 	<key>GCM_SENDER_ID</key>
-	<string>848114514935</string>
+	<string>898618242588</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.untitled</string>
+	<string>com.example.gitPractice</string>
 	<key>PROJECT_ID</key>
-	<string>fir-todo-774d3</string>
+	<string>gitfirebasetodo</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-todo-774d3.appspot.com</string>
+	<string>gitfirebasetodo.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:848114514935:ios:a48a5318fd900f61028cf2</string>
+	<string>1:898618242588:ios:edccb48ac360a20bab51d9</string>
 </dict>
 </plist>
